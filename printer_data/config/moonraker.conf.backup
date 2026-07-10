@@ -9,7 +9,7 @@ enable_object_processing: True
 
 [authorization]
 cors_domains:
-    *://my.mainsail.xyz
+    *://app.fluidd.xyz
     *://*.local
     *://*.lan
     *://localhost
@@ -28,17 +28,17 @@ trusted_clients:
 
 [announcements]
 subscriptions:
-    mainsail
+    fluidd
 
 [update_manager]
 refresh_interval: 168
 enable_auto_refresh: True
 
-[update_manager mainsail]
+[update_manager fluidd]
 type: web
 channel: stable
-repo: mainsail-crew/mainsail
-path: /var/www/mainsail
+repo: fluidd-core/fluidd
+path: /var/www/fluidd
 
 [update_manager Klipper-Adaptive-Meshing-Purging]
 type: git_repo
@@ -66,3 +66,31 @@ path: /home/sunday/mobileraker_companion
 type: git_repo
 
 [simplyprint]
+[update_manager moonraker-timelapse]
+type: git_repo
+path: ~/moonraker-timelapse
+origin: https://github.com/mainsail-crew/moonraker-timelapse.git
+managed_services: klipper moonraker
+primary_branch: main
+
+[update_manager crowsnest]
+type: git_repo
+path: ~/crowsnest
+origin: https://github.com/mainsail-crew/crowsnest.git
+primary_branch: v5
+managed_services: crowsnest
+system_dependencies: system-dependencies.json
+virtualenv: ~/crowsnest-env
+requirements: requirements.txt
+
+[include octoapp-system.cfg]
+
+
+[timelapse]
+camera: Neptune3Pro
+mode: hyperlapse
+hyperlapse_cycle: 30
+autorender: True
+parkhead: True
+parkpos: back_left
+fw_retract: True
