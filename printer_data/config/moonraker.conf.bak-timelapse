@@ -90,13 +90,11 @@ requirements: requirements.txt
 [timelapse]
 camera: Neptune3Pro
 mode: hyperlapse
-hyperlapse_cycle: 15
+hyperlapse_cycle: 30
 autorender: True
 parkhead: True
 parkpos: back_left
 fw_retract: True
-variable_fps: False
-output_framerate: 30
 
 # Sonar update_manager entry
 [update_manager sonar]
