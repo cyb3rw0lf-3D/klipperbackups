@@ -11,8 +11,6 @@
 [include timelapse.cfg]
 [include timelapse_mode_macros.cfg]
 
-[respond]
-
 [mcu]
 serial: /dev/serial/by-id/usb-1a86_USB_Serial-if00-port0
 restart_method: command
