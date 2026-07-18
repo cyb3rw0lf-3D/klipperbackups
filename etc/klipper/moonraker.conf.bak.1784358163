@@ -12,11 +12,6 @@ check_klipper_config_path: False
 provider: systemd_cli
 validate_service: False
 
-[spoolman]
-server: http://localhost:7912
-
-[simplyprint]
-
 [authorization]
 cors_domains:
     *://app.fluidd.xyz
@@ -46,7 +41,6 @@ subscriptions:
 refresh_interval: 168
 enable_auto_refresh: True
 enable_packagekit: False
-enable_system_updates: False
 
 [update_manager Klipper-Adaptive-Meshing-Purging]
 type: git_repo
