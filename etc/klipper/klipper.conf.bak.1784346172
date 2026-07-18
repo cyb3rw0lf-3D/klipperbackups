@@ -182,7 +182,7 @@ sensor_type: temperature_mcu
 [exclude_object]
 
 [virtual_sdcard]
-path: ~/printer_data/gcodes
+path: /var/opt/moonraker/gcodes
 
 [pause_resume]
 
@@ -345,3 +345,6 @@ gcode:
 #*# max_x = 155.6154
 #*# min_y = 68.2994
 #*# max_y = 161.6894
+
+[temperature_sensor host]
+sensor_type: temperature_host
